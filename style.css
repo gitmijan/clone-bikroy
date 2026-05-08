@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    width: 100%;
+    background: #00B53F;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 20px;
+    box-shadow: 0 9px 10px -10px #000000db;
+    font-weight: 400;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header .header_left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 35%;
+    gap: 12px;
+    text-transform: uppercase;
+}
+
+header .header_left .logo_right_text span{
+    display: none;
+    color: #ffffff98;
+    word-spacing: 0.6rem;
+}
+
+.header_right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 33px;
+    min-width: 50%;
+    padding-right: 12px;
+}
+
+.header_right .sell_btn{
+    text-transform: uppercase;
+    padding: 12px 46px;
+    border-radius: 6px;
+    background-color: #FEA03C;
+    transition: 0.5s;
+}
+
+.header_right .sell_btn:hover{
+    background-color: #E08D35;
+}
+
+.signin span{
+    padding:0 3px;
+}
+
+.signin span:nth-child(1){
+    border-right: 3px solid #fff;
+}
+
+/* ========== Header Style End ========== */
+
+.hero{
+    height: 40vh;
+    background: #00B53F;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 0 15px 15px;
+}
+
+.hero h2{
+    padding: 63px 0 13px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.hero form{
+    display: flex;
+    gap: 12px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hero form .select_area select{
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.hero form .input_area{
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.hero form .input_area input{
+    width: 100%;
+    padding: 12px 45px 12px 25px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.hero form .input_area .search_icon{
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0f0505;
+}
+
+.hero form .select_area select,
+.hero form .input_area input:focus{
+    outline: none;
+}
+/* ========== Hero Style End ========== */
+
+.category_container{
+    width: 95%;
+    margin: 0 auto;
+    margin: 44px auto;
+}
+
+.category{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 15px;
+    row-gap: 18px;
+}
+
+.category .cat_box{
+    width: 100%;
+    border: 3px solid green;
+    border-radius: 13px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px 2px #0f050580;
+}
+
+.category .cat_box .cat_img{
+    width: 100%;
+    transition: transform 1s;
+}
+
+.category .cat_box .cat_img:hover{
+    transform: scale(1.1);
+}
+
+.category .cat_box .cat_img img{
+    width: 100%;
+}
+/* ========== Category Style End ========== */
+
+.sidebar_product_section{
+    width: 100%;
+    background-color: #EBF2F7;
+    padding-top: 12px;
+}
+
+.sidebar_product_container{
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.sidebar_product_container .sidebar{
+    display: none;
+}
+
+.product_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 9px;
+    row-gap: 13px;
+}
+
+.product_container .product{
+    background: #fff;
+}
+
+.product_container .product_image{
+    width: 100%;
+}
+
+.product_container .product_image img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/* ========== sidebar and product Style End ========== */
+
+/* ============ Media Query Start ============ */
+@media (min-width: 531px) {
+    header .header_left .logo_right_text span{
+        display: block;
+    }
+}
+@media (min-width: 767px) {
+    header .header_left .logo_right_text span{
+        display: none;
+    }
+
+    .hero{
+        height: 60vh;
+        gap: 22px;
+    }
+
+    .hero h2{
+        padding: 0;
+        font-size: 22px;
+    }
+
+    .hero form{
+        width: 80%;
+    }
+
+
+
+    .category_container{
+        width: 80%;
+    }
+
+    .category_container .category{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 993px) {
+    .category_container {
+        display: none;
+    }
+
+    .sidebar_product_container .sidebar {
+        display: block;
+        width: 250px;
+        height: 80vh;
+        position: sticky;
+        top: 80px;
+        background: #fff;
+        border-radius: 0.5rem;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item {
+        display: flex;
+        border: 2px solid #fff;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item:hover {
+        background-color: #EBF2F7;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item .sidebar_image {
+        background-color: #EBF2F7;
+        margin: 4px;
+        width: 40px;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item .sidebar_image img {
+        width: 100%;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item:nth-child(n+1) {
+        border-top: 2px solid #EBF2F7;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item .sidebar_icon_text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 190px;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item .sidebar_icon_text i {
+        font-size: 9px;
+        color: #2f2b2b;
+        padding-right: 36px;
+    }
+}
