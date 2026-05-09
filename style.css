@@ -257,6 +257,10 @@ footer{
     width: 100%;
 }
 
+.footer_container .apps ul li a{
+    width: 100%;
+}
+
 .footer_container .apps img{
     width: 100%;
 }
