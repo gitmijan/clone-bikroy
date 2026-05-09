@@ -169,10 +169,12 @@ header .header_left .logo_right_text span{
     width: 100%;
     background-color: #EBF2F7;
     padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .sidebar_product_container{
     display: flex;
+    gap: 13px;
     width: 95%;
     margin: 0 auto;
 }
@@ -201,8 +203,68 @@ header .header_left .logo_right_text span{
     object-fit: contain;
 }
 
+.product_text .price{
+    font-weight: 700;
+    font-size: 18px;
+    color: #00B53F;
+}
+
+.product_text .product_name{
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000d7;
+}
+
+.product_text .product_info,
+.product_text .location{
+    font-weight: 400;
+    font-size: 14px;
+    color: #6c8ea0;
+    padding: 6px 2px;
+}
 
 /* ========== sidebar and product Style End ========== */
+
+footer{
+    background: #00B53F;
+    color: #fff;
+    height: 70vh;
+    width: 100%;
+    padding-top: 22px;
+}
+
+.footer_container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.footer_container ul{
+    list-style: none;
+}
+
+.footer_container ul li{
+    padding: 8px 6px;
+}
+
+.footer_container ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_container .apps{
+    width: 100%;
+}
+
+.footer_container .apps img{
+    width: 100%;
+}
+
+.copyright_footer p{
+    text-align: center;
+}
+/* ========== Footer Style End ========== */
 
 /* ============ Media Query Start ============ */
 @media (min-width: 531px) {
@@ -289,5 +351,10 @@ header .header_left .logo_right_text span{
         font-size: 9px;
         color: #2f2b2b;
         padding-right: 36px;
+    }
+
+    .sidebar_product_container .sidebar .sidebar_item .sidebar_icon_text .sidebar_text h3 {
+        font-size: 14px;
+        font-weight: 500;
     }
 }
